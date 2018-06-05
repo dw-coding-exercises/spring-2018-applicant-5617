@@ -106,7 +106,8 @@
      [:label {:for "street-field"} "Street:"]
      [:input {:id "street-field"
               :type "text"
-              :name "street"}]]
+              :name "street"
+              :required "true"}]]
     [:div
      [:label {:for "street-2-field"} "Street 2:"]
      [:input {:id "street-2-field"
@@ -116,10 +117,12 @@
      [:label {:for "city-field"} "City:"]
      [:input {:id "city-field"
               :type "text"
-              :name "city"}]
+              :name "city"
+              :required "true"}]
      [:label {:for "state-field"} "State:"]
      [:select {:id "state-field"
-               :name "state"}
+               :name "state"
+               :required "true"}
       [:option ""]
       (for [state us-state/postal-abbreviations]
         [:option {:value state} state])]
@@ -127,7 +130,8 @@
      [:input {:id "zip-field"
               :type "text"
               :name "zip"
-              :size "10"}]]
+              :size "10"
+              :required "true"}]]
     [:div.button
      [:button {:type "submit"} "Search"]]]])
 
